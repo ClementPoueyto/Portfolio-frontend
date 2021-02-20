@@ -1,0 +1,48 @@
+<nav class="fixed-top navbar navbar-expand-md navbar-dark bg-dark mb-4">
+  <a href="/" class="navbar-brand" style="color:#fff">Portfolio</a>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+    aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarCollapse">
+    <ul class="navbar-nav mr-auto">
+        <li *ngIf="path=='/'" class="nav-item">
+          <a [ngx-scroll-to]="'#profile'" class="nav-link">Profil</a>
+        </li>
+        <li *ngIf="path=='/'" class="nav-item">
+          <a [ngx-scroll-to]="'#formations'" class="nav-link">Formations</a>
+        </li>
+        <li *ngIf="path=='/'" class="nav-item">
+          <a [ngx-scroll-to]="'#projects'" class="nav-link">Projets</a>
+        </li>
+        <li *ngIf="path=='/'" class="nav-item">
+          <a [ngx-scroll-to]="'#competences'" class="nav-link">Compétences</a>
+        </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/assets/docs/CV_CLEMENT.pdf" target="_blank" style="color:#fff"
+          target="_blank">CV</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/travels" (click)="emitValue(null)" style="color:#fff">Voyages</a>
+      </li>
+      <li *ngIf="path=='/travels'" class="nav-item">
+        <a  class="nav-link" (click)="emitValue(tripEnum.EUROPE)" >Europe</a>
+      </li>
+      <li *ngIf="path=='/travels'" class="nav-item">
+        <a class="nav-link" (click)="emitValue(tripEnum.US)" >Etats-Unis</a>
+      </li>
+      <li *ngIf="path=='/travels'" class="nav-item">
+        <a  class="nav-link"  (click)="emitValue(tripEnum.AUSTRALIE)">Australie</a>
+      </li>
+      <li *ngIf="path=='/travels'" class="nav-item">
+        <a class="nav-link" (click)="emitValue(tripEnum.CHINA)">Chine</a>
+      </li>
+      <li *ngIf="path=='/travels'" class="nav-item">
+        <a  class="nav-link" (click)="emitValue(tripEnum.OUZBEK_KIRGHIZ)">Ouzbekistan/Kirghizistan</a>
+      </li>
+
+    </ul>
+  </div>
+
+</nav>

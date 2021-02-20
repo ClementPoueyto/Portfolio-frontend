@@ -1,0 +1,35 @@
+<div class="loader" *ngIf="!myProfile">
+  <i class="fa fa-spinner fa-spin" aria-hidden="true"></i>
+</div>
+<section id="profile" *ngIf="myProfile">
+  <br>
+  <div id="profilePhoto">
+    <img src={{myProfile.image}} class="img-fluid rounded-circle rounded mx-auto d-block" width="250"
+      alt="Responsive image profile">
+  </div>
+  <br>
+  <div class="text-center container-sm">
+    <h1 class="h1">{{myProfile.firstName}} {{myProfile.lastName }}</h1>
+    <h2>{{myProfile.status}}</h2>
+    <div>
+      <div class="wow fadeInLeft" data-wow-delay="0.3s">
+        <svg class="d-inline bi bi-chevron-right" width="30" height="30" viewBox="0 0 25 25" fill="currentColor"
+          xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd"
+            d="M6.646 3.646a.5.5 0 01.708 0l6 6a.5.5 0 010 .708l-6 6a.5.5 0 01-.708-.708L12.293 10 6.646 4.354a.5.5 0 010-.708z"
+            clip-rule="evenodd" />
+        </svg>
+        <h3 class="d-inline-block">{{age}} ans</h3>
+      </div>
+      <div class="wow fadeInLeft" data-wow-delay="0.6s">
+        <svg class="d-inline bi bi-chevron-right" width="30" height="30" viewBox="0 0 25 25" fill="currentColor"
+          xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd"
+            d="M6.646 3.646a.5.5 0 01.708 0l6 6a.5.5 0 010 .708l-6 6a.5.5 0 01-.708-.708L12.293 10 6.646 4.354a.5.5 0 010-.708z"
+            clip-rule="evenodd" />
+        </svg>
+        <h5 class="d-inline">{{myProfile.description}}</h5>
+      </div>
+    </div>
+  </div>
+</section>

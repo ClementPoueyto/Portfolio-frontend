@@ -1,0 +1,37 @@
+footer{
+  width:100%;
+}
+
+.container{
+  width:100%;
+  display: flex;
+  justify-content: center;
+}
+
+.git-ic,.li-ic{
+  display: flex;
+  justify-content: center;
+}
+
+.col-6{
+  margin: 10px 0px 10px 0px;
+}
+.links{
+  width:100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+mdb-icon{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+p{
+  font-size: 1vw;
+  text-align: center;
+  margin:3px;
+}

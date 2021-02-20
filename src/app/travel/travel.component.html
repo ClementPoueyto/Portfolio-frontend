@@ -1,0 +1,14 @@
+<section id="travels">
+  <app-navbar (trip)="_receiveTrip($event)"></app-navbar>
+  <div *ngIf="displayMarker&&markerToDisplay" id="popUpMarker" (click)="markerToDisplay=null">
+    <div class="card" id="windowMarker">
+      <img *ngIf="markerToDisplay.properties.image&&markerToDisplay.properties.image!=''" class="card-img-top"
+        src={{markerToDisplay.properties.image}} alt="Card image cap">
+      <div class="card-body mx-auto card-text">
+        <h3 *ngIf="markerToDisplay" class="card-text text-fluid">{{markerToDisplay.properties.place}}</h3>
+        <h5 *ngIf="markerToDisplay" class="card-text">{{markerToDisplay.properties.trip}}</h5>
+      </div>
+    </div>
+  </div>
+  <app-map-box [trip]="trip" [request]="requestMap" (markerToDisplay)="_receiveMarker($event)"></app-map-box>
+</section>

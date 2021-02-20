@@ -1,0 +1,24 @@
+<section id="formations">
+  <br>
+  <br>
+  <h2 class="text-center h1">
+    <strong>Formations</strong>
+  </h2>
+  <br>
+  <div class="loader" *ngIf="showLoader">
+    <i class="fa fa-spinner fa-spin" aria-hidden="true"></i>
+  </div>
+  <div class="mx-auto" id="card" *ngFor="let formation of formations">
+    <div id="image-profile-formation" class="wow fadeInLeft col-md-6 col-12" data-wow-delay="0.5s">
+      <img src={{formation.image}} class="img-fluid rounded rounded z-depth-1 mx-auto d-block" width="350"
+        alt="Responsive image">
+    </div>
+    <div id="text-card-formation" class="wow fadeInRight card col-md-6 col-12">
+      <div class="card-body">
+        <h5 class="card-title">{{formation.title}}</h5>
+        <h6 class="card-subtitle mb-2 text-muted">{{formation.period}} à {{formation.place}}</h6>
+        <p>{{formation.description}}</p>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,47 @@
+#card{
+  width:80%;
+  display: flex;
+  flex-wrap: wrap;
+  margin:15px 0px 15px 0px;
+  justify-content: center;
+  align-items: center;
+}
+
+
+#image-profile-formation{
+  width:350px;
+
+}
+
+#text-card-formation{
+  width: 350px;
+  text-align: center;
+  height:100%;
+
+}
+
+#formations{
+  width:100%;
+}
+
+img{
+  margin:8px 0px 8px 0px;
+}
+.loader{
+  left: 0 !important;
+  top: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  cursor: pointer !important;
+  visibility: visible !important;
+  transition: visibility 0s, opacity 0.4s linear !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: wait !important;
+
+}
+
+i.fa.fa-spinner.fa-spin, .spinner-big {
+  font-size: 100px !important;
+}

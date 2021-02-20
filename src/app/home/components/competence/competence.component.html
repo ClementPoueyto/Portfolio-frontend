@@ -1,0 +1,80 @@
+<section id="competences">
+  <br>
+  <br>
+  <h2 class="text-center h1 py-3">
+    <strong>Compétences</strong>
+  </h2>
+  <br>
+  <div class="loader" *ngIf="showLoader">
+    <i class="fa fa-spinner fa-spin" aria-hidden="true"></i>
+  </div>
+  <h3 class="text-center h2">
+    <strong>Langages</strong>
+  </h3>
+  <br>
+  <div class="wrapper container-fluid wow">
+    <div class="row text-center">
+      <div class="mx-auto">
+        <div class="d-inline-block" *ngFor="let competence of competences">
+          <div id="progLanguage" *ngIf="competence.skillType=='ProgLanguage'">
+            <circle-progress [percent]=competence.pourcentage [imageSrc]=competence.image
+              [outerStrokeColor]="'#E12D14'">
+            </circle-progress>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <h3 class="text-center h2">
+    <strong>Frameworks</strong>
+  </h3>
+  <br>
+  <div class="wrapper container-fluid">
+    <div class="row text-center">
+      <div class="mx-auto">
+        <div class="d-inline-block" *ngFor="let competence of competences">
+          <div style="padding:30px" *ngIf="competence.skillType=='Frameworks'">
+            <circle-progress [percent]=competence.pourcentage [imageSrc]=competence.image
+              [outerStrokeColor]="'#2243E7'">
+            </circle-progress>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <h3 class="text-center h2">
+    <strong>DevOps</strong>
+  </h3>
+  <br>
+  <div class="wrapper container-fluid">
+    <div class="row text-center">
+      <div class="mx-auto">
+        <div class="d-inline-block" *ngFor="let competence of competences">
+          <div style="padding:30px" *ngIf="competence.skillType=='Tool'">
+            <circle-progress [percent]=competence.pourcentage [imageSrc]=competence.image
+              [outerStrokeColor]="'#F4E907'">
+            </circle-progress>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <h3 class="text-center h2">
+    <strong>Langues</strong>
+  </h3>
+  <br>
+  <div class="wrapper container-fluid">
+    <div class="row text-center mx-auto">
+      <div class="mx-auto">
+        <div class="d-inline-block" *ngFor="let competence of competences">
+          <div style="padding:30px" *ngIf="competence.skillType=='SpokenLanguage'">
+            <circle-progress [percent]=competence.pourcentage [imageSrc]=competence.image
+              [outerStrokeColor]="'#78C000'">
+            </circle-progress>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</section>

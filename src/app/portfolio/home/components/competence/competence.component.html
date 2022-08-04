@@ -1,0 +1,74 @@
+<section id="competences">
+  <br>
+  <br>
+  <h2>
+    <strong>Compétences</strong>
+  </h2>
+  <br>
+  <h3>
+    <strong>Langages</strong>
+  </h3>
+  <br>
+    <div >
+      <div class="align">
+        <div *ngFor="let competence of competences">
+          <div  id="progLanguage" *ngIf="competence.skillType=='programming'">
+            <div >
+              <img src={{imageUrl}}{{competence.logoId}}
+                alt="Responsive image profile">
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <h3>
+    <strong>DevOps</strong>
+  </h3>
+  <br>
+    <div >
+      <div class="align">
+        <div *ngFor="let competence of competences">
+          <div style="padding:30px" *ngIf="competence.skillType=='tool'">
+            <div >
+              <img src={{imageUrl}}{{competence.logoId}}
+                alt="Responsive image profile">
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <h3>
+    <strong>Frameworks</strong>
+  </h3>
+  <br>
+    <div >
+      <div class="align">
+        <div *ngFor="let competence of competences">
+          <div style="padding:30px" *ngIf="competence.skillType=='framework'">
+            <div >
+              <img src={{imageUrl}}{{competence.logoId}}
+                alt="Responsive image profile">
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <h3 >
+    <strong>Langues</strong>
+  </h3>
+  <br>
+    <div>
+      <div class="align">
+        <div *ngFor="let competence of competences">
+          <div style="padding:30px" *ngIf="competence.skillType=='language'">
+            <div >
+              <img src={{imageUrl}}{{competence.logoId}}
+                alt="Responsive image profile">
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</section>

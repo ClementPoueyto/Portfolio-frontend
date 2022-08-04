@@ -1,0 +1,28 @@
+#progLanguage{
+  padding:30px
+}
+
+h2{
+  display: flex;
+  justify-content: center;
+}
+
+h3{
+  display: flex;
+  justify-content: center;
+}
+
+img {
+  border-radius: 50%;
+  object-fit:cover;
+  width: 100px;
+  height: 100px;
+  margin:8px 0px 8px 0px;
+}
+
+.align{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-direction: row;
+}

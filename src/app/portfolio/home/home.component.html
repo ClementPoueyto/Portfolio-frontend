@@ -1,0 +1,46 @@
+<ng-scrollbar #scrollbarRef>
+    <mat-toolbar class="position-fixed" color="primary">
+        <mat-toolbar-row>
+            <button fxShow.xs fxHide mat-icon-button [matMenuTriggerFor]="menu">
+                <mat-icon>menu</mat-icon>
+            </button>
+            <mat-menu #menu="matMenu">
+                <button mat-menu-item (click)="scrollbarRef.scrollToElement('#profile')">Profil</button>
+                <button mat-menu-item (click)="scrollbarRef.scrollToElement('#formations')">Formations</button>
+                <button mat-menu-item (click)="scrollbarRef.scrollToElement('#projets')">Projets</button>
+                <button mat-menu-item (click)="scrollbarRef.scrollToElement('#competences')">Competences</button>
+                <button mat-menu-item (click)="scrollbarRef.scrollToElement('#competences')">Contact</button>
+
+            </mat-menu>
+            <div fxHide.xs fxShow>
+            <span [style.cursor]="'pointer'" routerLink="/">Portfolio</span>
+        </div>
+            <div fxHide.xs fxShow>
+                <a mat-button (click)="scrollbarRef.scrollToElement('#profile')">Profil</a>
+                <a mat-button (click)="scrollbarRef.scrollToElement('#formations')">Formations</a>
+                <a mat-button (click)="scrollbarRef.scrollToElement('#projets')">Projets</a>
+                <a mat-button (click)="scrollbarRef.scrollToElement('#competences')">Competences</a>
+                <a mat-button (click)="scrollbarRef.scrollToElement('#competences')">Contact</a>
+
+            </div>
+            <span class="example-spacer"></span>
+            <button mat-icon-button aria-label=" icon-button with save_alt icon">
+                <mat-icon>save_alt</mat-icon>
+            </button>
+        </mat-toolbar-row>
+    </mat-toolbar>
+
+
+
+
+    <app-profil (outputScroll)="this.scrollDown($event)" id="profile"></app-profil>
+    <br>
+    <app-formation id="formations"></app-formation>
+    <br>
+    <app-projet id="projets"></app-projet>
+    <br>
+    <app-competence id="competences"></app-competence>
+    <br>
+    <app-footer></app-footer>
+
+</ng-scrollbar>

@@ -1,0 +1,32 @@
+html, body {
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+#renderCanvas {
+    width: 100%;
+    height: 100%;
+    touch-action: none;
+}
+#fpsLabel {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    color: #999;
+    cursor: default;
+}
+
+#customLoadingScreenDiv{
+
+    background-color: rgba(15, 14, 14, 0.8);
+    font-size:50px;
+    text-align:center;
+    width: 100%;
+    height: 100%;
+
+}
+
+

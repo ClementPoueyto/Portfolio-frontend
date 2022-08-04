@@ -1,0 +1,22 @@
+.example-spacer {
+    flex: 1 1 auto;
+  }
+
+
+.position-fixed{
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.menu-main{
+  display: flex;
+  justify-content: space-between;
+}
+
+span{
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+

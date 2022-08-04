@@ -1,0 +1,28 @@
+<!--Projects section v.1-->
+<section id="projects" >
+  <br>
+  <!--Section heading-->
+  <h2>
+    <strong>Projets</strong>
+  </h2>
+<div #projects>
+  <mat-tab-group dynamicHeight mat-align-tabs="center">
+    <mat-tab *ngFor="let enum of ProjectTypeValues()" label="{{this.getFrenchEnum(enum)}}">
+       <!--Grid column-->
+
+    <mat-grid-list [cols]="breakpoint" rowHeight="650" (window:resize)="onResize($event)">
+      <mat-grid-tile
+      *ngFor="let projet of projets"
+          [colspan]="1"
+          [rowspan]="1">
+         <app-project-card *ngIf="projet.projectType==enum" [projet]="projet"></app-project-card>
+      </mat-grid-tile>
+    </mat-grid-list>
+    <!--Grid column-->
+    </mat-tab>
+    
+  </mat-tab-group>
+   
+  </div>
+</section>
+

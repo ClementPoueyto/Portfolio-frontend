@@ -1,0 +1,53 @@
+#profilePhoto{
+  margin-top:30px;
+
+}
+
+#profilePhoto > img {
+  border-radius: 50%;
+}
+
+#profile{
+  height: 100vh;
+  width:100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.profileInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-grow: 0.6;
+
+}
+
+.align{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+svg{
+  margin-bottom: 10px;
+  display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+a{
+  margin : 10px
+}
+
+.links{
+  width: 50%;
+  margin-bottom: 40px;
+  height: 80px;
+  display: flex;
+  flex-direction: row;
+    justify-content: space-around;
+}
+
+
+

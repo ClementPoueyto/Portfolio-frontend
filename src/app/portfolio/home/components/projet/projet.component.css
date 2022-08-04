@@ -1,0 +1,18 @@
+
+
+section{
+  padding-top: 50px;
+}
+
+h2{
+  display: flex;
+  justify-content: center;
+}
+
+
+#projects{
+ width: 100%;
+ min-height: 100vh;
+
+}
+

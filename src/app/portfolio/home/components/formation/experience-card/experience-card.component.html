@@ -1,0 +1,16 @@
+<mat-card>
+    <div id="image-profile-experience">
+      <img src={{imageUrl}}{{experience.imageId}} alt="Responsive experience image">
+    </div>
+    <div id="text-card-experience" class="card">
+      <div class="card-body">
+        <h2 class="card-title">{{experience.title}}</h2>
+        <h3 *ngIf="experience.endDate" class="card-subtitle">Du {{experience.startDate | date: 'longDate' : '' :
+          'fr-FR'}} au {{experience.endDate | date: 'longDate' : '' : 'fr-FR'}} à {{experience.place}}</h3>
+        <h3 *ngIf="!experience.endDate" class="card-subtitle">Depuis le {{experience.startDate | date: 'longDate' : ''
+          : 'fr-FR'}} à {{experience.place}}</h3>
+
+        <p>{{experience.description}}</p>
+      </div>
+    </div>
+  </mat-card>

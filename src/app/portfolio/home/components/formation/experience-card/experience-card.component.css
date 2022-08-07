@@ -12,6 +12,7 @@
   h2,h3{
     display: flex;
     justify-content: center;
+    text-align: center;
   }
 
   p{
@@ -30,9 +31,17 @@
   
   
   img{
-    margin:8px 0px 8px 0px;
+     object-fit:contain;
     width: 100%;
     max-width: 350px;
+    height: 300px;
+    margin:8px 0px 8px 0px;
+  }
+
+
+
+  #text-card-experience{
+    width: 60%;
   }
   
   

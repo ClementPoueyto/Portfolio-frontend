@@ -8,6 +8,11 @@ app-experience-card{
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 80%;
+}
+
+strong{
+  margin: 10px;
 }
 
 h2{

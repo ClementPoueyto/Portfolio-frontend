@@ -27,7 +27,7 @@ export class CompetenceComponent implements OnInit {
   getCompetences = () => {
     this.api.getAllCompetences().subscribe(
       data => {
-        this.competences = data;
+        this.competences = data.sort((a, b) => new Date(a.createdAt).getTime() - new Date(b.createdAt).getTime());
         this.showLoader=false;
       },
       error => {

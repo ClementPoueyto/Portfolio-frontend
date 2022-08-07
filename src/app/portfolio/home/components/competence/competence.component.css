@@ -26,3 +26,12 @@ img {
   flex-wrap: wrap;
   flex-direction: row;
 }
+
+strong{
+  margin: 10px;
+}
+
+section{
+  padding-top: 50px;
+  min-height: 100vh;
+}

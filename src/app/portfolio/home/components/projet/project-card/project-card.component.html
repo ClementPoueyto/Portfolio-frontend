@@ -7,8 +7,11 @@
         {{projet.title}}
     </mat-card-title>
     <br>
-    <mat-card-subtitle>
+    <mat-card-subtitle *ngIf="(this.projet.startDate | date:'yyyy/MM') != (this.projet.endDate | date:'yyyy/MM')">
         {{projet.startDate | date: 'MMMM YYYY' : '' : 'fr-FR'}} - {{projet.endDate | date: 'MMMM YYYY' : '' : 'fr-FR'}}
+    </mat-card-subtitle>
+    <mat-card-subtitle *ngIf="(this.projet.startDate | date:'yyyy/MM') == (this.projet.endDate | date:'yyyy/MM')">
+        {{projet.startDate | date: 'MMMM YYYY' : '' : 'fr-FR'}}
     </mat-card-subtitle>
     <mat-card-subtitle>
         {{projet.description}}

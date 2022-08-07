@@ -6,10 +6,9 @@
             </button>
             <mat-menu #menu="matMenu">
                 <button mat-menu-item (click)="scrollbarRef.scrollToElement('#profile')">Profil</button>
-                <button mat-menu-item (click)="scrollbarRef.scrollToElement('#formations')">Formations</button>
+                <button mat-menu-item (click)="scrollbarRef.scrollToElement('#formations')">Expériences</button>
                 <button mat-menu-item (click)="scrollbarRef.scrollToElement('#projets')">Projets</button>
-                <button mat-menu-item (click)="scrollbarRef.scrollToElement('#competences')">Competences</button>
-                <button mat-menu-item (click)="scrollbarRef.scrollToElement('#competences')">Contact</button>
+                <button mat-menu-item (click)="scrollbarRef.scrollToElement('#competences')">Compétences</button>
 
             </mat-menu>
             <div fxHide.xs fxShow>
@@ -17,22 +16,21 @@
         </div>
             <div fxHide.xs fxShow>
                 <a mat-button (click)="scrollbarRef.scrollToElement('#profile')">Profil</a>
-                <a mat-button (click)="scrollbarRef.scrollToElement('#formations')">Formations</a>
+                <a mat-button (click)="scrollbarRef.scrollToElement('#formations')">Expériences</a>
                 <a mat-button (click)="scrollbarRef.scrollToElement('#projets')">Projets</a>
-                <a mat-button (click)="scrollbarRef.scrollToElement('#competences')">Competences</a>
-                <a mat-button (click)="scrollbarRef.scrollToElement('#competences')">Contact</a>
+                <a mat-button (click)="scrollbarRef.scrollToElement('#competences')">Compétences</a>
 
             </div>
             <span class="example-spacer"></span>
-            <button mat-icon-button aria-label=" icon-button with save_alt icon">
+            <a mat-icon-button aria-label=" icon-button with save_alt icon" href="/assets/docs/CV_CLEMENT.pdf" target="_blank">
                 <mat-icon>save_alt</mat-icon>
-            </button>
+            </a>
         </mat-toolbar-row>
     </mat-toolbar>
 
 
 
-
+    <div class="background">
     <app-profil (outputScroll)="this.scrollDown($event)" id="profile"></app-profil>
     <br>
     <app-formation id="formations"></app-formation>
@@ -42,5 +40,5 @@
     <app-competence id="competences"></app-competence>
     <br>
     <app-footer></app-footer>
-
+    </div>
 </ng-scrollbar>

@@ -7,12 +7,12 @@
   </h2>
 <div #projects>
   <mat-tab-group dynamicHeight mat-align-tabs="center">
-    <mat-tab *ngFor="let enum of ProjectTypeValues()" label="{{this.getFrenchEnum(enum)}}">
+    <mat-tab *ngFor="let enum of ProjectTypeValues()" label="{{this.getFrenchEnum(enum)}}s">
        <!--Grid column-->
 
     <mat-grid-list [cols]="breakpoint" rowHeight="650" (window:resize)="onResize($event)">
       <mat-grid-tile
-      *ngFor="let projet of projets"
+      *ngFor="let projet of this.filterProjects(enum)"
           [colspan]="1"
           [rowspan]="1">
          <app-project-card *ngIf="projet.projectType==enum" [projet]="projet"></app-project-card>

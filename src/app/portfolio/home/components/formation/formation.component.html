@@ -1,17 +1,17 @@
 <section id="formations">
   <br>
   <h2>
-    <strong>Experiences</strong>
+    <strong>Expériences</strong>
   </h2>
   <br>
 
   <mat-tab-group dynamicHeight mat-align-tabs="center">
-    <mat-tab label="Professionelle">
+    <mat-tab label="Professionelles">
       <div class="cardDiv" *ngFor="let formation of formations">
         <app-experience-card  *ngIf="formation.experienceType=='profesional'" [experience]="formation"></app-experience-card>
       </div>
     </mat-tab>
-    <mat-tab label="Formation">
+    <mat-tab label="Formations">
       <div class="cardDiv" *ngFor="let formation of formations">
         <app-experience-card *ngIf="formation.experienceType=='formation'" [experience]="formation"></app-experience-card>
       </div>

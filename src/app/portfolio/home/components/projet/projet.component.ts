@@ -35,7 +35,7 @@ export class ProjetComponent implements OnInit {
       case 'professional':
         return 'Professionnel';
         case 'educational':
-          return 'Scolaire';
+          return 'Etude';
           case 'personal':
             return 'Personnel';
             default : return ''
@@ -45,7 +45,7 @@ export class ProjetComponent implements OnInit {
   getProjets = () => {
     this.api.getAllProjets().subscribe(
       data => {
-        this.projets = data;
+        this.projets = data.sort((a, b) => new Date(b.startDate).getTime() - new Date(a.startDate).getTime());
       },
       error => {
         console.log(error);
@@ -64,5 +64,10 @@ onResize(event) {
   else if(event.target.innerWidth<1200) this.breakpoint = 2;
   else this.breakpoint = 3;}
 
+  filterProjects(value : string){
+      return this.projets.filter(p => {
+        return p.projectType == value
+      })
+  }
 
 }

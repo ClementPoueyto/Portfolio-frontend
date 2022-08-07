@@ -4,7 +4,7 @@ import { PortfolioRoutingModule } from './portfolio-routing.module';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatIconModule} from '@angular/material/icon';
 import { HomeComponent } from './home/home.component';
-import { FooterComponent } from './footer/footer.component';
+import { FooterComponent } from './home/components/footer/footer.component';
 import { FormationComponent } from './home/components/formation/formation.component';
 import { ProfilComponent } from './home/components/profil/profil.component';
 import { ProjetComponent } from './home/components/projet/projet.component';
@@ -20,6 +20,8 @@ import {MatMenuModule} from '@angular/material/menu';
 import {MatTabsModule} from '@angular/material/tabs';
 import { ExperienceCardComponent } from './home/components/formation/experience-card/experience-card.component';
 import { ProjectCardComponent } from './home/components/projet/project-card/project-card.component';
+import { ContactComponent } from './home/components/contact/contact.component';
+import { CompetenceLogoComponent } from './home/components/competence/competence-logo/competence-logo.component';
 
 
 
@@ -33,6 +35,8 @@ import { ProjectCardComponent } from './home/components/projet/project-card/proj
     CompetenceComponent,
     ExperienceCardComponent,
     ProjectCardComponent,
+    ContactComponent,
+    CompetenceLogoComponent,
   ],
   imports: [
     CommonModule,

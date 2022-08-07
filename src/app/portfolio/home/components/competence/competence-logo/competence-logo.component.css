@@ -1,0 +1,15 @@
+img {
+    object-fit:contain;
+    width: 100px;
+    height: 100px;
+    margin:8px 0px 8px 0px;
+  }
+
+#icon{
+    display: flex;
+    justify-content: center;
+}
+
+h3{
+    text-align: center;
+}

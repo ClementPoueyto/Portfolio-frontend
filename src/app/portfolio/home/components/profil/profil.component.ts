@@ -1,7 +1,6 @@
 import { animate, style, transition, trigger } from '@angular/animations';
 import { Component, EventEmitter, OnInit, Output, ViewChild } from '@angular/core';
-import { Router } from '@angular/router';
-import { NgScrollbar } from 'ngx-scrollbar';
+
 import { Profile } from 'src/app/portfolio/models/profile.models';
 import { BlogService } from 'src/app/portfolio/service/blog.service';
 import { serverUrl, serverUrlImage } from 'src/configs/server.config';
@@ -30,10 +29,10 @@ export class ProfilComponent implements OnInit {
   @Output()
   public outputScroll = new EventEmitter<MouseEvent>();
 
-  public imageUrl = serverUrl + "portfolio/profiles/12/avatar" 
+  public imageUrl = serverUrl + "profiles/12/avatar" 
   public myProfile:Profile;
   public age  : number;
-
+  public loaded : boolean = false;
   constructor(private api:BlogService) {
     this.getProfile();
 
@@ -62,6 +61,7 @@ getProfile = async () => {
 
       this.myProfile = data;
       this.CalculateAge();
+      this.loaded = true;
 
     },
     error => {

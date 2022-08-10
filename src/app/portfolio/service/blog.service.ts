@@ -7,7 +7,7 @@ import { serverUrl } from 'src/configs/server.config';
 })
 export class BlogService {
 
-  baseURL = serverUrl+"portfolio/";
+  baseURL = serverUrl;
   httpHeaders = new HttpHeaders({'Content-type':'application/json', 'accept':'application/json'});
 
   constructor(private http: HttpClient) { }

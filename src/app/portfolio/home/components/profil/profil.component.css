@@ -1,10 +1,12 @@
 #profilePhoto{
-  margin-top:30px;
-
+  padding-top: 56px;
+  display: flex;
+  justify-content: center;
 }
 
 #profilePhoto > img {
   border-radius: 50%;
+
 }
 
 #profile{
@@ -13,7 +15,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 20px;
   background-color: white;
 }
 
@@ -23,6 +24,14 @@
   align-items: center;
   flex-grow: 0.6;
 
+}
+
+.content{
+  height: 80%;
+}
+
+.scroll-down{
+  height: 10%;
 }
 
 .align{
@@ -39,16 +48,21 @@ svg{
 }
 
 a{
-  margin : 10px
+  margin : 10px;
+  display: flex;
+  justify-content: center;
 }
 
 .links{
-  width: 50%;
   margin-bottom: 40px;
   height: 80px;
   display: flex;
   flex-direction: row;
     justify-content: space-around;
+}
+
+img{
+  width: 250px;
 }
 
 
@@ -60,4 +74,55 @@ h3{
 }
 h4{
   font-size: 20px;
+}
+
+.loader{
+  left: 0 !important;
+  top: 0 !important;
+  width: 100% !important;
+  cursor: pointer !important;
+  visibility: visible !important;
+  transition: visibility 0s, opacity 0.4s linear !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: wait !important;
+
+}
+
+@media (max-height : 650px) {
+  .content{
+    display :flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+  }
+
+  img{
+    
+    width: 200px;
+  }
+
+  #profilePhoto{
+    padding-top: 0px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+  }
+
+  .profileInfo{
+    display: flex;
+    justify-content: center;
+  }
+
+  .links{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+ .scroll-down{
+  margin-bottom: 60px;
+ }
 }

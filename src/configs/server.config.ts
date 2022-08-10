@@ -6,6 +6,6 @@ export const httpOptionsBase = {
   })
 };
 
-export const serverUrl = "http://localhost:3000/api/" //local
-//export const serverUrl = 'https://portfolio--backend.herokuapp.com/api';
-export const serverUrlImage = "http://localhost:3000/database-files/";
+//export const serverUrl = "http://localhost:3000/api/" //local
+export const serverUrl = 'https://api.portfolio.clementpoueyto.fr/';
+export const serverUrlImage = serverUrl + "database-files/";

@@ -22,6 +22,8 @@ import { ExperienceCardComponent } from './home/components/formation/experience-
 import { ProjectCardComponent } from './home/components/projet/project-card/project-card.component';
 import { ContactComponent } from './home/components/contact/contact.component';
 import { CompetenceLogoComponent } from './home/components/competence/competence-logo/competence-logo.component';
+import { LoaderComponent } from './home/components/loader/loader.component';
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 
 
 
@@ -37,6 +39,7 @@ import { CompetenceLogoComponent } from './home/components/competence/competence
     ProjectCardComponent,
     ContactComponent,
     CompetenceLogoComponent,
+    LoaderComponent,
   ],
   imports: [
     CommonModule,
@@ -51,7 +54,8 @@ import { CompetenceLogoComponent } from './home/components/competence/competence
     NgScrollbarModule,
     FlexLayoutModule,
     MatMenuModule,
-    MatTabsModule
+    MatTabsModule,
+    MatProgressSpinnerModule
 
   ]
 })

@@ -1,10 +1,10 @@
 
   
   mat-card{
-    width: 70%;
+    width: 95%;
     margin:15px 0px 15px 0px;
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column ;
     justify-content: space-around;
     align-items: center;
   }
@@ -19,29 +19,36 @@
     text-align: center;
   }
 
-  #text-card-formation{
-    display: flex;
-    width: 100%;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-    height:100%;
-  
-  }
   
   
+
   img{
      object-fit:contain;
     width: 100%;
-    max-width: 350px;
     height: 300px;
     margin:8px 0px 8px 0px;
   }
 
 
 
-  #text-card-experience{
-    width: 60%;
+  .card-body{
+    width: 95%;
+  }
+
+  @media (min-width : 1024px) {
+    mat-card {
+      width: 80%;
+    }
+
+    .card-body{
+      width: 70%;
+    }
+  }
+  
+  @media screen and (min-width : 1600px) {
+    mat-card {
+      width: 60%;
+    }
   }
   
   

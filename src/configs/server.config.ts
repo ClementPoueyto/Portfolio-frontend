@@ -6,6 +6,6 @@ export const httpOptionsBase = {
   })
 };
 
-export const serverUrl = "http://localhost:3000/" //local
-//export const serverUrl = 'https://api.portfolio.clementpoueyto.fr/';
+//export const serverUrl = "http://localhost:3000/" //local
+export const serverUrl = 'https://api.portfolio.clementpoueyto.fr/';
 export const serverUrlImage = serverUrl + "database-files/";

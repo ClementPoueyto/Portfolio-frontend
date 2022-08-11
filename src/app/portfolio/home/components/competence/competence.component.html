@@ -41,6 +41,18 @@
       </div>
   </div>
   <h3 >
+    <strong>DevOps</strong>
+  </h3>
+  <br>
+      <div class="align">
+        <div *ngFor="let competence of competences">
+          <div style="padding:30px" *ngIf="competence.skillType=='devops'">
+            <app-competence-logo [competence]="competence"></app-competence-logo>
+
+        </div>
+    </div>
+  </div>
+  <h3 >
     <strong>Langues</strong>
   </h3>
   <br>

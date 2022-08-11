@@ -22,7 +22,7 @@ export class BlogService {
   }
 
   getAllCompetences(): Observable<any>{
-    return this.http.get(this.baseURL + 'skills/',
+    return this.http.get(this.baseURL + 'skills?display=true',
     {headers : this.httpHeaders});
   }
 

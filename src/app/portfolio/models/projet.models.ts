@@ -1,3 +1,4 @@
+import { Competence } from "./competence.models";
 import { Link } from "./link.models";
 
 export enum ProjectType {
@@ -17,4 +18,5 @@ export interface Projet {
   imageId?:number;
   github?: Link;
   link? : Link;
+  tools : Competence[]
 }

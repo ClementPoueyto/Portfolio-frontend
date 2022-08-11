@@ -17,7 +17,7 @@ export class HomeComponent implements OnInit {
   opened: boolean = true;
 
   scrollDown($event){
-    this.scrollbarRef.scrollToElement('#formations')
+    this.scrollbarRef.scrollToElement('#formations');
   }
   
   ngOnInit() {
